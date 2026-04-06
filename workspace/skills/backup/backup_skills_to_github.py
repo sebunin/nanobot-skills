@@ -234,7 +234,7 @@ def update_readme():
 # ─── Main ─────────────────────────────────────────────────────────────────────
 
 def main():
-    print(f"=== Nanobot GitHub Backup → {REPO} ===\n")
+    print(f"=== Nanobot GitHub Backup -> {REPO} ===\n")
 
     # 1. Check gh auth
     code, stdout, stderr = run_gh(["auth", "status"])
@@ -254,7 +254,7 @@ def main():
     total_changed = 0
     total_skipped = 0
     for local_path, repo_path in BACKUP_SOURCES:
-        print(f"Uploading: {local_path.name} → {repo_path}")
+        print(f"Uploading: {local_path.name} -> {repo_path}")
         c, s = upload_source(local_path, repo_path)
         total_changed += c
         total_skipped += s
