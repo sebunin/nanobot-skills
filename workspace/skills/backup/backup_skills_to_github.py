@@ -266,7 +266,7 @@ def upload_source(local_path, repo_prefix):
             sanitized_content, replaced_patterns = sanitize_content(content)
             
             if replaced_patterns:
-                print(f"  ⚠️  sanitized: {repo_path} (replaced: {', '.join(replaced_patterns)})")
+                print(f"  [SANITIZED] {repo_path} (replaced: {', '.join(replaced_patterns)})")
                 sanitized += 1
                 upload_bytes = sanitized_content.encode('utf-8')
             else:
